@@ -170,7 +170,9 @@ section{
   #menu-bar{
     display: initial;
   }
-
+  .header-1 .setting{
+    display: none;
+  }
   .header-2 .navbar{
     position: absolute;
     top:100%; left: 0; right:0;
