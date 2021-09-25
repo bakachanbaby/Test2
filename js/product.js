@@ -93,12 +93,12 @@ renderProducts = (products) => {
             <div class="col-4 col-md-6 col-sm-12">
                 <div class="product-card">
                     <div class="product-card-img">
-                        <img src="${e.image1}" alt="">
-                        <img src="${e.image2}" alt="">
+                        <img class= "img_1" src="${e.image1}" alt="">
+                        <img class = "img_2" src="${e.image2}" alt="">
                     </div>
                     <div class="product-card-info">
                         <div class="product-btn">
-                            <a href="./product-detail.html" class="btn-flat btn-hover btn-shop-now">shop now</a>
+                            <a href="#" class="btn-flat btn-hover btn-shop-now">shop now</a>
                             <button class="btn-flat btn-hover btn-cart-add">
                                 <i class='bx bxs-cart-add'></i>
                             </button>
@@ -106,6 +106,7 @@ renderProducts = (products) => {
                                 <i class='bx bxs-heart'></i>
                             </button>
                         </div>
+                        
                         <div class="product-card-name">
                             ${e.name}
                         </div>
@@ -129,3 +130,19 @@ let filter_col = document.querySelector('#filter-col')
 document.querySelector('#filter-toggle').addEventListener('click', () => filter_col.classList.toggle('active'))
 
 document.querySelector('#filter-close').addEventListener('click', () => filter_col.classList.toggle('active'))
+
+
+
+
+
+const btn = document.querySelector('.btn-shop-now');
+const img1 = document.querySelector('.img_1')
+const img2 = document.querySelector('.img_2')
+btn.addEventListener('mousemove',function(event){
+    img1.style.display = 'none';
+    img2.style.display = 'block';
+}) 
+btn.addEventListener('mouseout',function(event){
+    img1.style.display = 'block';
+    img2.style.display = 'none';
+}) 
