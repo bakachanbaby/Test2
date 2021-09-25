@@ -145,9 +145,9 @@ document.querySelector('#filter-toggle').addEventListener('click', () => filter_
 document.querySelector('#filter-close').addEventListener('click', () => filter_col.classList.toggle('active'))
 
 
-let btn = document.querySelectorAll('.btn-shop-now');
-let img1 = document.querySelectorAll('.img_1')
-let img2 = document.querySelectorAll('.img_2')
+let btn = document.querySelector('.btn-shop-now');
+let img1 = document.querySelector('.img_1')
+let img2 = document.querySelector('.img_2')
 btn.addEventListener('mousemove', function (event) {
     img1.style.display = 'none';
     img2.style.display = 'block';
