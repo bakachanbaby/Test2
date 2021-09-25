@@ -21,7 +21,7 @@ let products = [
         curr_price: '350,000₫'
     },
     {
-        name: 'Giày Cao Gót Mũi Nhọn Gắn Dây Xích Mảnh',
+        name: 'Giày Cao Gót Mũi Nhọn Gắn Dây',
         image1: 'images/kem_cg09145_1_18e2ab82832346f6982def001237f366_master-removebg-preview.png',
         image2: 'images/kem_cg09145_7_521ab2e484984978a3cda77d9eadff50_master-removebg-preview.png',
         old_price: '495,000₫',
@@ -98,7 +98,26 @@ renderProducts = (products) => {
                     </div>
                     <div class="product-card-info">
                         <div class="product-btn">
-                            <a href="#" class="btn-flat btn-hover btn-shop-now">shop now</a>
+                            <button class="btn-flat btn-hover btn-shop-now">shop now</>
+                            <button class="btn-flat btn-hover btn-cart-add">
+                                <i class='bx bxs-cart-add'></i>
+                            </button>
+                            <button class="btn-flat btn-hover btn-cart-add">
+                                <i class='bx bxs-heart'></i>
+                            </button>
+                        </div>
+                        <div class="product-card-name">
+                            ${e.name}
+                        </div>
+                        <div class="product-card-price">
+                            <span><del>${e.old_price}</del></span>
+                            <span class="curr-price">${e.curr_price}</span>
+                        </div>
+                        
+                    </div>
+                    <div class="product-card-info product-p2">
+                        <div class="product-btn">
+                            <button class="btn-flat btn-hover btn-shop-now">shop now</>
                             <button class="btn-flat btn-hover btn-cart-add">
                                 <i class='bx bxs-cart-add'></i>
                             </button>
@@ -107,14 +126,8 @@ renderProducts = (products) => {
                             </button>
                         </div>
                         
-                        <div class="product-card-name">
-                            ${e.name}
-                        </div>
-                        <div class="product-card-price">
-                            <span><del>${e.old_price}</del></span>
-                            <span class="curr-price">${e.curr_price}</span>
-                        </div>
                     </div>
+                    
                 </div>
             </div>
         `
@@ -132,17 +145,14 @@ document.querySelector('#filter-toggle').addEventListener('click', () => filter_
 document.querySelector('#filter-close').addEventListener('click', () => filter_col.classList.toggle('active'))
 
 
-
-
-
-const btn = document.querySelector('.btn-shop-now');
-const img1 = document.querySelector('.img_1')
-const img2 = document.querySelector('.img_2')
-btn.addEventListener('mousemove',function(event){
+let btn = document.querySelectorAll('.btn-shop-now');
+let img1 = document.querySelectorAll('.img_1')
+let img2 = document.querySelectorAll('.img_2')
+btn.addEventListener('mousemove', function (event) {
     img1.style.display = 'none';
     img2.style.display = 'block';
-}) 
-btn.addEventListener('mouseout',function(event){
+})
+btn.addEventListener('mouseout', function (event) {
     img1.style.display = 'block';
     img2.style.display = 'none';
-}) 
+})
