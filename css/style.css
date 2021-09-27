@@ -93,6 +93,7 @@ img {
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 100px;
+    cursor: pointer;
 }
 
 .product-card:hover {
@@ -300,12 +301,25 @@ img {
         justify-content: center;
     }
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 910px) {
     .btn-shop-now,
     .btn-cart-add {
-    font-size: 12px;
+    font-size: 10px;
     padding: 3px 5px;
     line-height: 15px;
+    }
+    .product-card-img {
+        height: 150px;
+        
+    }
+    .product-card-info{
+        padding: 10px;
+    }
+    .product-card-price .curr-price{
+        font-size: 10px;
+    }
+    .product-card-name{
+        font-size: 15px;
+    }
     
-}
 }
